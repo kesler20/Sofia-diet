@@ -24,7 +24,7 @@ app.post("/food", (req, res) => {
 });
 
 app.get("/foodDatabase", (req, res) => {
-  const db = new DatabaseApi("food.json");
+  const db = new DatabaseApi("./food.json");
   res.send(JSON.stringify(db.viewDatabase()));
 });
 
@@ -41,7 +41,7 @@ app.post("/meal", (req, res) => {
 });
 
 app.get("/mealDatabase", (req, res) => {
-  const db = new DatabaseApi("meal.json");
+  const db = new DatabaseApi("./meal.json");
   res.send(JSON.stringify(db.viewDatabase()));
 });
 
@@ -58,7 +58,7 @@ app.post("/diet", (req, res) => {
 });
 
 app.get("/dietDatabase", (req, res) => {
-  const db = new DatabaseApi("diet.json");
+  const db = new DatabaseApi("./diet.json");
   res.send(JSON.stringify(db.viewDatabase()));
 });
 
@@ -71,7 +71,7 @@ class DatabaseApi {
 
   createResource(resource) {
     //check for existing resources or if the resource is an object
-    let existingResources = require(`${this.fileName}`);
+    let existingResources = require(`./${this.fileName}`);
     let updatedResources = [...existingResources, resource];
     updatedResources = JSON.stringify(updatedResources);
 
@@ -103,14 +103,14 @@ const createFood = (body) => {
     cost: body.foodCost,
     calories: body.foodCalories,
   };
-  const db = new DatabaseApi("food.json");
+  const db = new DatabaseApi("./food.json");
   db.createResource(food);
   return food;
 };
 
 const createMeal = (body) => {
   let recipe = [];
-  const db = new DatabaseApi("food.json");
+  const db = new DatabaseApi("./food.json");
   for (const ingredientIndex in body.foodName) {
     let ingredientName = body.foodName[ingredientIndex];
     let ingredientAmount = parseInt(body.foodAmount[ingredientIndex], 10) / 100;
@@ -138,14 +138,14 @@ const createMeal = (body) => {
   //   }
   // });
 
-  const dbMeal = new DatabaseApi("meal.json");
+  const dbMeal = new DatabaseApi("./meal.json");
   dbMeal.createResource(meal);
   return meal;
 };
 
 const createDietPlan = (body) => {
   let meals = [];
-  const db = new DatabaseApi("meal.json");
+  const db = new DatabaseApi("./meal.json");
   console.log("body received", body);
   for (const mealIndex in body.mealName) {
     // when the meal on the diet is only one, this will return the first letter
@@ -174,7 +174,7 @@ const createDietPlan = (body) => {
   //   }
   // });
 
-  const dbMeal = new DatabaseApi("diet.json");
+  const dbMeal = new DatabaseApi("./diet.json");
   dbMeal.createResource(dietPlan);
   return dietPlan;
 };
