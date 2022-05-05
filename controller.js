@@ -71,7 +71,7 @@ class DatabaseApi {
 
   createResource(resource) {
     //check for existing resources or if the resource is an object
-    let existingResources = require(`./${this.fileName}`);
+    let existingResources = require(`${this.fileName}`);
     let updatedResources = [...existingResources, resource];
     updatedResources = JSON.stringify(updatedResources);
 
