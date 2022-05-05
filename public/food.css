@@ -1,0 +1,84 @@
+.card-folder {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 550px;
+  border-radius: 15px;
+  background-color: rgb(144, 80, 204);
+  transform: rotate(10deg) translate(-40%);
+  animation: roll-in-left 2s;
+  box-shadow: 20px 20px 20px rgb(155, 155, 155);
+}
+
+.card {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  z-index: 100;
+  margin-bottom: -450px;
+  height: 500px;
+  border: 0.1px solid rgb(190, 190, 190);
+  background-color: white;
+  transform: translate(-40%);
+  border-radius: 15px;
+  animation: roll-in-right 2s;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-size: 17px;
+}
+
+.create-food-btn {
+    margin: 20px;
+    z-index: 150;
+}
+
+.badge {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: rgb(88, 88, 88);
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.food-content {
+  margin-top: 300px;
+}
+
+@keyframes roll-in-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(-40%, 0, 0) rotate(10deg);
+  }
+}
+
+@keyframes roll-in-right {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(-40%, 0, 0);
+  }
+} ;

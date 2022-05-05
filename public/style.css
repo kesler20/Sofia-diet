@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  --presentation-font-family: "Roboto Mono", monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(Logo.png);
+  background-position-x: left;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: 10%;
+}
+
+#root {
+  max-width: 1065px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+hr {
+  border: 1px #e3eafc solid;
+  width: 100%;
+  height: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.info-btn {
+  margin: 20px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="presentation.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="sidebar.css" />
+    <link rel="stylesheet" href="food.css" />
+    <link rel="stylesheet" href="meal.css" />
+    <title>Sofia Diet</title>
+  </head>
+  <body>
+    <div id="root">
+      <nav class="navbar">
+        <div class="hamburger-menu">
+          <div class="hamburger"></div>
+          <div class="hamburger"></div>
+          <div class="hamburger"></div>
+        </div>
+        <div class="site-title">
+          <a href="./"><img src="Logo.png" alt="" srcset="" /></a>
+          <p>sofiaDiet</p>
+        </div>
+        <!--change the text content of the version dynamically using the version class on javascript-->
+        <div class="version">
+          <p>version: v.0.1</p>
+        </div>
+      </nav>
+      <hr />
+      <nav class="side-bar hide">
+        <a href="./diet" class="nav-link">Diet Plan v</a>
+        <a href="./meal" class="nav-link">Meals v</a>
+        <a href="./food" class="nav-link">Foods v</a>
+      </nav>
+      <div class="presentation">
+        <h1>Use Ai to Guide Your Diet</h1>
+        <h4>
+          <p>
+            <a>verison.0.1 of sofiaDiet </a> is an Ai Virtual Assistant part of
+          </p>
+          <p>
+            the <a>SOF</a>tware <a>I</a>nteligenza <a>A</a>rtificiale protocol.
+          </p>
+        </h4>
+        <a class="btn primary-btn" href="./foodDatabase">
+          Food Info
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 15 15"
+            width="12"
+            height="12"
+            style="margin-left: 0.33em"
+          >
+            <g
+              stroke="currentColor"
+              stroke-width="1.75"
+              fill="none"
+              fill-rule="evenodd"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M4.497 1H3a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2v-1.5h0"
+                opacity=".6"
+              ></path>
+              <path d="M9 1.008L14 1v5M14 1L6 9"></path>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
