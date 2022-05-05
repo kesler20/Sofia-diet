@@ -75,7 +75,7 @@ class DatabaseApi {
     let updatedResources = [...existingResources, resource];
     updatedResources = JSON.stringify(updatedResources);
 
-    fs.writeFile(this.fileName, updatedResources, "utf8", (err) => {
+    fs.writeFile(`./${this.fileName}`, updatedResources, "utf8", (err) => {
       if (err) {
         console.log("Failed to create resource 💩", err);
         return "";
