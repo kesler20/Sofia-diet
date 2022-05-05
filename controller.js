@@ -91,6 +91,7 @@ class DatabaseApi {
 
   getResource(resourceName) {
     let resource = require(`./${this.fileName}`);
+    console.log(resource)
     return resource.filter((item) => item.name === resourceName);
   }
 }
