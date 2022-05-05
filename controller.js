@@ -64,6 +64,7 @@ app.post("/diet", (req, res) => {
 });
 
 //TODO: remove the dependence on food
+//TODO: store everything in lower case
 // ---------------------- DATABASE ---------------
 class DatabaseApi {
   constructor(fileName) {
