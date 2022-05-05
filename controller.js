@@ -57,7 +57,8 @@ app.post("/diet", (req, res) => {
   res.sendFile(path.join(viewsPath, "diet.html"));
 });
 
-  app.get("/dietDatabase", (req,// if you put relative imports the database will also put relative imports res) => {
+  app.get("/dietDatabase", (req, res) => {
+    // if you put relative imports the database will also put relative imports res) => {
   const db = new DatabaseApi("diet.json");
   res.send(JSON.stringify(db.viewDatabase()));
 });
