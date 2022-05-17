@@ -12,13 +12,13 @@ class DietDatabase extends Component {
           </tr>
           <tr>
             <td>
-              <input name="totalProtein" type="number" />
+              <input name="totalProtein" type="number" step="0.1" />
             </td>
             <td>
-              <input name="totalCalories" type="number" />
+              <input name="totalCalories" type="number" step="0.1" />
             </td>
             <td>
-              <input name="totalCost" type="number" />
+              <input name="totalCost" type="number" step="0.1" />
             </td>
           </tr>
         </table>
